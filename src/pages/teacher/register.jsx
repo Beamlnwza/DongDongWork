@@ -42,7 +42,6 @@ const Register = () => {
         }
 
         if (password !== confirmPassword) {
-            console.log(password, confirmPassword)
             setError('Password not match')
             return
         }
@@ -61,7 +60,6 @@ const Register = () => {
                 return
             }
 
-            console.log(data)
             setLoading(false)
         }
 

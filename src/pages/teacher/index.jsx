@@ -14,7 +14,6 @@ const Teacher = () => {
         if (data.session != null) {
             navigate('/teacher/post')
         } else {
-            console.log('not login')
             return navigate('/teacher/register')
         }
     }
