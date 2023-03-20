@@ -62,24 +62,26 @@ const Login = () => {
         }
 
         setLoading(false)
+        setError('เข้าสู่ระบบสำเร็จ')
+        navigate('/teacher/post')
     }
 
     return (
         <div className="register-wrapper">
-            <div>Login</div>
-            <div>{error}</div>
+            <div>เข้าสู่ระบบ</div>
+            <div className="error">{error}</div>
             <div>Email : </div>
             <input type="text" onChange={(e) => setEmail(e.target.value)} />
-            <div>Password : </div>
+            <div>รหัสผ่าน : </div>
             <input
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <button onClick={SubmitHandle}>Submit</button>
+            <button onClick={SubmitHandle}>เข้าสู่ระบบ</button>
             <div>{loading && <div>Loading!</div>}</div>
-            <div>don't have account?</div>
+            <div>ไม่มีบัญชี?</div>
             <button onClick={() => navigate('/teacher/register')}>
-                register
+                สมัครสมาชิก
             </button>
         </div>
     )

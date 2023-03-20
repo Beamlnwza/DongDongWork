@@ -61,6 +61,8 @@ const Register = () => {
             }
 
             setLoading(false)
+            //redirect to /teacher/post
+            navigate('/teacher/post')
         }
 
         signUpWithEmail()
@@ -68,23 +70,26 @@ const Register = () => {
 
     return (
         <div className="register-wrapper">
-            <div>Register</div>
+            <div>สมัครสมาชิก</div>
             <div>{error}</div>
             <div>Email : </div>
             <input onChange={(e) => setEmail(e.target.value)} type="text" />
-            <div>Password : </div>
-            <input onChange={(e) => setPassword(e.target.value)} type="text" />
-            <div>Confirm Password : </div>
+            <div>รหัสผ่าน : </div>
+            <input
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+            />
+            <div>ยืนยันรหัสผ่าน : </div>
             <input
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                type="text"
+                type="password"
             />
-            <button onClick={SubmitHandle}>Submit</button>
+            <button onClick={SubmitHandle}>สมัครสมาชิก</button>
             <div>{loading && <div>Loading!</div>}</div>
             <div>
-                <div>Already have account?</div>
+                <div>มีบัญชีอยู่แล้ว?</div>
                 <button onClick={() => navigate('/teacher/login')}>
-                    Login
+                    เข้าสู่ระบบ
                 </button>
             </div>
         </div>

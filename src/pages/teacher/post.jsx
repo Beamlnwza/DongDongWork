@@ -54,11 +54,9 @@ const Post = () => {
         if (error) {
             return
         }
-        if (data.session == null) {
-            navigate('/teacher/login')
-        }
 
-        window.location.reload()
+        navigate('/teacher/login')
+        setError('ออกจากระบบสำเร็จ')
     }
 
     const assignHandle = async () => {
@@ -82,7 +80,7 @@ const Post = () => {
             return
         }
 
-        if (year > 6 || classs > 10 || year < 1 || classs < 1) {
+        if (year > 6 || classs > 12 || year < 1 || classs < 1) {
             setError('โปรดระบุชั้นและห้องให้ถูกต้อง')
             return
         }
@@ -113,7 +111,7 @@ const Post = () => {
         //delay 5 sec after that reload page
         setTimeout(() => {
             window.location.reload()
-        }, 5000)
+        }, 1000)
     }
 
     return (
@@ -133,7 +131,7 @@ const Post = () => {
                         </button>
                     </div>
                     <div>ระบบสั่งงาน</div>
-                    <div>{error}</div>
+                    <div className="error">{error}</div>
                     <div className="form-container">
                         <div>ชั้นมัธยมศึกษาปีที่</div>
                         <input
@@ -145,7 +143,7 @@ const Post = () => {
                         <input
                             type="number"
                             onChange={(e) => setClasss(e.target.value)}
-                            pattern="[1-6]"
+                            pattern="[1-12]"
                         />
                         <div>วิชา</div>
                         <input
