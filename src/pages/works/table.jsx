@@ -9,7 +9,14 @@ const Table = () => {
     const [stateFliterData, setStateFilterData] = useRecoilState(tableState)
     const [isload, setIsLoad] = useState(false)
 
-    const Header = ['วันที่', 'วิชา', 'งาน', 'รายละเอียดของงาน', 'กำหนดส่ง']
+    const Header = [
+        'วันที่',
+        'วิชา',
+        'งาน',
+        'รายละเอียดของงาน',
+        'กำหนดส่ง',
+        'ครูผู้สอน',
+    ]
 
     useEffect(() => {
         const fetchWorks = async () => {
@@ -56,8 +63,10 @@ const Table = () => {
 
     const workItems = works.map((work, index) => {
         let workArray = Object.values(work)
+        let teacher = workArray[8]
         workArray.shift()
         workArray = workArray.slice(0, 5)
+        workArray.push(teacher)
         return (
             <>
                 {workArray.map((item, index) => {
