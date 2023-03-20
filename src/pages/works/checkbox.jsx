@@ -7,7 +7,7 @@ import './checkbox.css'
 const Checkbox = () => {
     const [checkbox, setCheckbox] = useState(Array(6).fill(false))
 
-    const [checkbox2, setCheckbox2] = useState(Array(10).fill(false))
+    const [checkbox2, setCheckbox2] = useState(Array(11).fill(false))
 
     const [stateFliterData, setStateFilterData] = useRecoilState(tableState)
 
