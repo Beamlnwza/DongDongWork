@@ -1,0 +1,111 @@
+.post-wrapper{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 0.5fr 10fr 0.5fr;
+
+    position: absolute;
+    z-index: 1;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.post-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    grid-column-start: 2;
+    grid-row: 2;
+    background-color: #FEF3ED;
+
+    border: 3px solid #744434;
+    box-shadow: 10px 10px 0px 10px rgba(116,68,46,1);
+    border-radius: 30px;
+
+    gap: 10px;
+
+}
+
+.post-background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #A7C4AA;
+
+    position: absolute;
+    z-index: -1;
+
+    background: repeating-linear-gradient(-65deg, #A9CBB0, #A9CBB0 2px, #92B796 4px, #92B796 27px);
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.form-container input{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #744434;
+    border-radius: 5px;
+    padding: 5px;
+
+    font-size: 16px;
+}
+
+.form-container .bigfield{
+    width: 500px;
+    height: 100px;
+    border: 1px solid #744434;
+    border-radius: 5px;
+    padding: 5px;
+
+    word-wrap: break-word;
+    word-break: break-all;
+
+    font-size: 16px;
+}
+
+.post-container .post-button{
+    display: flex;
+    width: fit-content;
+    transform: translateX(200%);
+}
+
+.post-container .assign{
+    font-size: 16px;
+    align-self: flex-end;
+    margin-right: 20px;
+}
+
+.post-container .logout{
+    font-size: 16px;
+    align-self: flex-end;
+    margin-right: 20px;
+}
+
+.post-container button:nth-child(1){
+    border: 1px solid #744434;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: red;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+}
+
+.post-container button:nth-child(2){
+    background-color: #744434;
+    color: #A7C4AA;
+    padding: 10px 20px 10px 20px;
+}

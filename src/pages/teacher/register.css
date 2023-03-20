@@ -1,0 +1,45 @@
+.register-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    font-size: 1.25rem;
+    gap: 20px;
+}
+
+.register-wrapper input[type="text"]{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+
+
+    font-size: 1rem;
+}
+.register-wrapper input[type="password"]{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+
+
+    font-size: 1rem;
+}
+
+.register-wrapper button{
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+
+    font-size: 1rem;
+    background-color: cornflowerblue;
+    color: white;
+
+    cursor: pointer;
+}

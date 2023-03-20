@@ -1,0 +1,20 @@
+.checkbox-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-row{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.ch-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

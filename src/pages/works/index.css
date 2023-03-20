@@ -1,0 +1,64 @@
+.Works-wrapper{
+    display: grid;
+    grid-template-columns: 0.03fr 1fr 0.03fr;
+    margin-top: 1.5rem;
+
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+}
+
+.Works-background{
+    position: relative;
+    z-index: -1;
+    background-color: #8EB996;
+    width: 100vw;
+    height: 100vh;
+    
+    background: repeating-linear-gradient(-65deg, #A9CBB0, #A9CBB0 2px, #92B796 4px, #92B796 27px);
+}
+
+.Works-wrapper .center{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 20px;
+    background-color: #FEF3ED;
+    padding: 0 10px 0 10px;
+    border-radius: 30px;
+    border: 3px solid #714530;
+}
+
+.Works-wrapper .center .title{
+    font-size: 2.45rem;
+    font-weight: 600;
+    color: #000;
+
+    background-color: #F8CDA2;
+    padding: 17px 30px 17px 30px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.Works-wrapper .center .subtitle{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #000;
+
+    background-color: #FEBC5B;
+    padding: 15px 20px 15px 20px;
+    border-radius: 15px;
+}
+
+.Works-wrapper .center .assignwork{
+    display: flex;
+
+    margin-bottom: 20px;
+    background-color: red;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
